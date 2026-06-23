@@ -13,6 +13,7 @@ public class hashMap {
             System.out.println(e.getKey());
             System.out.println(e.getValue());
         }
+        System.out.println(mp.containsKey("Amandeep"));
         
     }
 }
