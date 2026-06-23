@@ -4,3 +4,10 @@
 (iii)Subtract the product and sum of digits of an integer (#1281)
 (iv)Concatenation of array (#1929)
 (v)Contains Duplicate (#217)
+
+****23-06-2026****
+(i)Prime Number
+(ii)Two Sum(#1)
+(iii)Valid Anagram(#242)
+(iv)Left and Right Sum Difference(#2574)
+(v)Longest Consecutive Sequence(#128)
