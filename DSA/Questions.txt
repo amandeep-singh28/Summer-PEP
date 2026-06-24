@@ -12,3 +12,11 @@
 (iv)Left and Right Sum Difference(#2574)
 (v)Longest Consecutive Sequence(#128)
 (vi)Product of Array(#238)
+
+****24-06-2026****
+(i)Replace Elements with Greatest Element on Right Side (#1299)
+(ii)Single Number (#136)
+(iii)Boyre-Moore Algorithm (Majority Element #169)
+(iv)Reversing Linked List(#206)
+(v)Merge two Sorted Lists(#21)
+(vi)Reverse Linked List 2(#92)
