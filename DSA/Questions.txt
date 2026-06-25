@@ -20,3 +20,7 @@
 (iv)Reversing Linked List(#206)
 (v)Merge two Sorted Lists(#21)
 (vi)Reverse Linked List 2(#92)
+
+****25-06-2026****
+(i)Middle of the linked list(#876)
+(ii)Convert Binary Number in a Linked List to Integer (#1290)
