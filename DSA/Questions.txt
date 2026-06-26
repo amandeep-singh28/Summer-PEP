@@ -24,3 +24,10 @@
 ****25-06-2026****
 (i)Middle of the linked list(#876)
 (ii)Convert Binary Number in a Linked List to Integer (#1290)
+
+****26-06-2026****
+(i)Friend request 2: Who has the most friends(#602)
+(ii)Binary Search(#704)
+(iii)Maximum count of positive and negative integers(#2529)
+(iv)Count Negative numbers in a sorted matrix (#1351)
+(v)Design Parking System (#1603)
