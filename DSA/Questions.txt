@@ -31,3 +31,10 @@
 (iii)Maximum count of positive and negative integers(#2529)
 (iv)Count Negative numbers in a sorted matrix (#1351)
 (v)Design Parking System (#1603)
+
+****29-06-2026****
+(i)Guess number higher or lower(#374)
+(ii)Design HashSet(#705)
+(iii)Arranging Coins(#441)
+(iv)Number of strings that appear as substrings in word (#1967)
+(v)Find First and Last Position of Element in Sorted Array (#34)
