@@ -38,3 +38,10 @@
 (iii)Arranging Coins(#441)
 (iv)Number of strings that appear as substrings in word (#1967)
 (v)Find First and Last Position of Element in Sorted Array (#34)
+
+****30-06-2026****
+(i)Number of Substrings Containing All Three Characters(#1358)
+(ii)Number of Segments in a String(#434)
+(iii)Pow(x, n) (#50)
+(iv)Power of Two(#231)
+(v)Shuffle String(#1528)
