@@ -51,16 +51,32 @@ public class basic {
         //     else right = mid - 1;
         // }
 
-        String str = "abcAbc";
-        Map<Character, Integer> mp = new HashMap<>();
-        char[] arr = str.toCharArray(); // [a, b, c]
-        for (var e : arr) {
-            if (mp.containsKey(e) == false) {
-                mp.put(e, 1);
+        // String str = "abcAbc";
+        // Map<Character, Integer> mp = new HashMap<>();
+        // char[] arr = str.toCharArray(); // [a, b, c]
+        // for (var e : arr) {
+        //     if (mp.containsKey(e) == false) {
+        //         mp.put(e, 1);
+        //     } else {
+        //         mp.put(e, mp.get(e) + 1);
+        //     }
+        // }
+        // System.out.println(mp);
+
+        int arr[] = {1, 2, 3, 5, 7, 9};
+        int target = 9;
+        int min = Integer.MAX_VALUE;
+        for (Integer val : arr) {
+            if (val == target) {
+                System.out.println("Element Found");
+                break;
+            }
+            if (val < target) {
+                min = val;
             } else {
-                mp.put(e, mp.get(e) + 1);
+                break;
             }
         }
-        System.out.println(mp);
+        System.out.println(min);
     }
 }
