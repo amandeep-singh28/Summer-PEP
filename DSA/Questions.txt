@@ -45,3 +45,7 @@
 (iii)Pow(x, n) (#50)
 (iv)Power of Two(#231)
 (v)Shuffle String(#1528)
+
+****1-07-2026****
+(i)Capacity To Ship Packages Within D Days(#1011)
+(ii)Minimum Absolute Difference(#1200)
