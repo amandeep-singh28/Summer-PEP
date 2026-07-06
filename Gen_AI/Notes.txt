@@ -102,4 +102,15 @@ Hugging face -> Largest repositories of all of the models from where you can dow
 
 If we have to choose the 2nd option -> Than Hugging face can do it automatically (HF inference API) but it has cost.
 
+****Embedding Models****
+Models are of two types:-
+    Text(OS & Closed) -> Input as text and output as Text
+    Embedding -> Input as text but output as vectors
 
+Work:-
+(i)Create vectors for all of the paragraphs(Documents)
+(ii)Create vector for query
+(iii)Find the closest document vector for the query vector
+(iv)Closest would be the answer
+
+dimensions = 500, length of each vector (Even if there is a single word, the single word will represent 500 length)
