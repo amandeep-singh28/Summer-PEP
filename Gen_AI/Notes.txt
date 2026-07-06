@@ -18,3 +18,56 @@ pip install langchain
 pip install langchain_openai
 
 pip install langchain_google_genai
+
+****LangChain: Simplifying LLM Provider Switching****
+If we change the LLM provider than we need to change our code also(OpenAI, Anthropic)
+For example:-
+->Using OpenAI
+from openai import OpenAI
+
+client = OpenAI()
+
+response = client.chat.completions.create(
+    model="gpt-5",
+    messages=[{"role": "user", "content": "Hello"}]
+)
+print(response.choices[0].message.content)
+
+-> Using Anthropic
+from anthropic import Anthropic
+
+client = Anthropic()
+
+response = client.messages.create(
+    model="claude-sonnet-4",
+    max_tokens=100,
+    messages=[
+        {"role": "user", "content": "Hello"}
+    ]
+)
+print(response.content[0].text)
+
+->Solution: LangChain Models
+We have models parameter in our LangChain -> It makes our life easy by providing a common interface
+
+(i)OpenAI with LangChain
+from langchain_openai import ChatOpenAI
+
+llm = ChatOpenAI(
+    model="gpt-5"
+)
+
+response = llm.invoke("Hello")
+
+print(response.content)
+
+(ii)Anthropic with LangChain
+from langchain_anthropic import ChatAnthropic
+
+llm = ChatAnthropic(
+    model="claude-sonnet-4"
+)
+
+response = llm.invoke("Hello")
+
+print(response.content)
