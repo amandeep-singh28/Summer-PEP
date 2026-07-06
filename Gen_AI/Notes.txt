@@ -71,3 +71,35 @@ llm = ChatAnthropic(
 response = llm.invoke("Hello")
 
 print(response.content)
+
+****Parameters of langchain****
+(i)model
+(ii)max_completion_token = Integer Value
+It is directly proportional to length.
+Two types of token:
+    Input and output token
+If the input token is large than the cost would also be high. Similarly for the output token as well.
+Token has cost assosciative with it.
+Token(I/p) < Token(O/p)
+
+(iii)temperature
+The temperature parameter controls the randomness or creativity of the model's output.
+    Low temperature → More deterministic and focused answers
+    High temperature → More creative and diverse answers
+
+****Open Source Models****
+Cons of frontier paid models but advantages of open source model:-
+(i)Cost
+(ii)Privacy
+(iii)Network
+(iv)Fine tuning
+We can also make our open source model "paid" by making some changes in it.
+
+-> How to use open source models
+Example: LLama(developed by meta) -> Host(Model ka code dalkr chordiya) -> We have to use it, we can do it in 2 ways either downloading it and run locally into the system, or downloading it and upload it on the cloud platform create api and then use it
+
+Hugging face -> Largest repositories of all of the models from where you can download it
+
+If we have to choose the 2nd option -> Than Hugging face can do it automatically (HF inference API) but it has cost.
+
+
