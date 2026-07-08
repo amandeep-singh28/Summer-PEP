@@ -114,3 +114,48 @@ Work:-
 (iv)Closest would be the answer
 
 dimensions = 500, length of each vector (Even if there is a single word, the single word will represent 500 length)
+
+
+****08-07-2026****
+****Chain****
+What are we doing?
+Pipeline: Input → Prompt → Model → Parser → Output
+We first provide an input to the application.
+That input is converted into a prompt (either a Single Message Prompt or a Multi-Message Prompt).
+The prompt is then sent to the LLM (Model).
+The model generates a response.
+The response is passed to an Output Parser, which formats or extracts the required information.
+Finally, the parsed result is displayed as the output.
+
+Here are the steps in a short and easy-to-remember format:
+
+(i)Import the required libraries.
+(ii)Create the Prompt Template (ChatPromptTemplate).
+(iii)Create the Model (ChatGoogleGenerativeAI).
+(iv)Create the Output Parser (StrOutputParser).
+(v)Invoke the Prompt using chat_prompt.invoke() to generate the final prompt.
+(vi)Invoke the Model using model.invoke() to get the model's response (AIMessage).
+(vii)Invoke the Parser using parser.invoke() to extract the text from the model's response.
+(viii)Print the final output.
+
+Flow Diagram
+User Input
+     ↓
+ChatPromptTemplate
+     ↓
+chat_prompt.invoke()
+     ↓
+PromptValue
+     ↓
+model.invoke()
+     ↓
+AIMessage
+     ↓
+parser.invoke()
+     ↓
+String Output
+     ↓
+print()
+One-line summary for exams
+
+Import Libraries → Create Prompt → Create Model → Create Parser → Invoke Prompt → Invoke Model → Invoke Parser → Print Output.
