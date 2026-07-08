@@ -159,3 +159,15 @@ print()
 One-line summary for exams
 
 Import Libraries → Create Prompt → Create Model → Create Parser → Invoke Prompt → Invoke Model → Invoke Parser → Print Output.
+
+To solve this problem, we use Chain(See example Gen_AI -> chatPromptUsingChain):
+    chain = chat_prompt | model | parser
+
+Task 1:-
+(i)Create a file joke_generator.py
+(ii)User_input = "topic"
+(iii)no_of_jokes = int Value
+(iv)Prompt:- ChatPromptTemplate, Model:- ChatOpenAI, Parse:- StrOutputParser
+
+Task 2:-
+I/P -> Prompt 1 -> Model 1 -> Parser -> Prompt 2(Analyze this joke and Create a better joke than this {response} Return the old joke and new joke with analyzes) -> Model 2 -> Parser -> Output
