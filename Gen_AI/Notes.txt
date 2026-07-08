@@ -171,3 +171,94 @@ Task 1:-
 
 Task 2:-
 I/P -> Prompt 1 -> Model 1 -> Parser -> Prompt 2(Analyze this joke and Create a better joke than this {response} Return the old joke and new joke with analyzes) -> Model 2 -> Parser -> Output
+
+****Use of parallel chains****
+A Parallel Chain executes multiple chains at the same time using the same input (or different mapped inputs), instead of waiting for one chain to finish before starting the next.
+
+Sequential Chain (what you've done)
+Input
+  │
+  ▼
+Prompt 1
+  │
+  ▼
+Model 1
+  │
+  ▼
+Parser
+  │
+  ▼
+Prompt 2
+  │
+  ▼
+Model 2
+  │
+  ▼
+Parser
+  │
+  ▼
+Output
+
+Here, Prompt 2 cannot start until Prompt 1 finishes because it needs Prompt 1's output.
+
+Parallel Chain
+                    Input
+                      │
+      ┌───────────────┴───────────────┐
+      ▼                               ▼
+  Prompt 1                        Prompt 2
+      │                               │
+      ▼                               ▼
+   Model 1                        Model 2
+      │                               │
+      ▼                               ▼
+    Parser                         Parser
+      │                               │
+      └───────────────┬───────────────┘
+                      ▼
+                 Combined Output
+
+           Input
+              │
+      ┌───────┼────────┐
+      ▼       ▼        ▼
+   Prompt1 Prompt2 Prompt3
+      │       │        │
+      ▼       ▼        ▼
+    Model   Model    Model
+      │       │        │
+      ▼       ▼        ▼
+    Parser  Parser   Parser
+      │       │        │
+      └───────┼────────┘
+              ▼
+           Output
+
+Both chains must start at the same time.
+
+Task:- User will give a city
+Chain1:- Top Tourist attraction
+Chain2:- Food places
+Chain3:- Best time to vist
+
+                     Input (City)
+                          |
+                          |
+            ---------------------------------
+            |               |               |
+            |               |               |
+     Tourist           Food           Best Time
+      Prompt           Prompt           Prompt
+            |               |               |
+          Model           Model           Model
+            |               |               |
+          Parser          Parser          Parser
+            \               |              /
+             \              |             /
+              \_____________|____________/
+                        |
+                        |
+                RunnableParallel
+                        |
+                        |
+                 Combined Output
