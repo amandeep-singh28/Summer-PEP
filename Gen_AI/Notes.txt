@@ -262,3 +262,51 @@ Chain3:- Best time to vist
                         |
                         |
                  Combined Output
+
+We can create graph of chains also (Using Lang graph)
+Lang spin observe models how it is performing
+
+****Conditional Chaining****
+RunnableBranch is used to implement conditional chaining in LangChain. It allows you to execute different chains based on a condition.
+
+from langchain_core.runnables import RunnableBranch
+
+conditional_chain = RunnableBranch(
+    (func1, chain1),
+    (func2, chain2),
+    default_chain
+)
+How it works
+Each function (func1, func2, ...) acts as a condition and must return either True or False.
+RunnableBranch evaluates the conditions from top to bottom.
+As soon as a condition returns True, the corresponding chain is executed.
+The remaining conditions are not checked.
+If none of the conditions return True, the default_chain is executed (if provided).
+Example Flow
+            Input
+              |
+              |
+     -------------------
+     |                 |
+   func1?           False
+     |
+   True
+     |
+   chain1
+     |
+    Output
+
+If func1 = False
+        |
+      func2?
+     /     \
+  True     False
+   |          |
+chain2   default_chain
+   |          |
+ Output     Output
+Key Points
+RunnableBranch works like an if → elif → else statement in Python.
+Conditions are evaluated sequentially.
+The first matching condition determines which chain is executed.
+A default_chain is optional but recommended to handle cases where no condition matches.
