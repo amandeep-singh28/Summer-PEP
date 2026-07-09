@@ -332,3 +332,15 @@ But there are some problems in this:-
     when an AI generates confident, plausible-sounding, but entirely false or nonsensical information
     (iv)Private information (Privacy)
 
+-> Solution
+(i) Fine tuning (RLHF, LORA) {Only big companies do these because computational expensive, It is not that easy to do fine tuning}
+private/ company data is solved, cutoff date is also solved(Again fine tuned the data -> But expensive), Hallucinations (upto particular extent we can solve this, give examples, if not then directly say no)
+Want to use that model on a particular way.
+Take any open source model which is already trained, try to retrain again with the specific data.
+We will play with the parameters like temperature, weight and biases.
+
+Company "Outlier"
+They fine tuned these models. We gave wrong prompts and than retrained the model using RLHF
+
+(ii)Context Engineering
+We gave prompts and on the basis of that we trained the models by giving examples.
