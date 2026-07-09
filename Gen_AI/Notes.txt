@@ -310,3 +310,9 @@ RunnableBranch works like an if → elif → else statement in Python.
 Conditions are evaluated sequentially.
 The first matching condition determines which chain is executed.
 A default_chain is optional but recommended to handle cases where no condition matches.
+
+Task:-
+Create a project Story Generator
+Based on the age, you will be geenrating stories
+  if (age < 18), create kids stories
+  elif (age > 18) create horror stories
