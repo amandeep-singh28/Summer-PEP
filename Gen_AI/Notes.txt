@@ -316,3 +316,19 @@ Create a project Story Generator
 Based on the age, you will be geenrating stories
   if (age < 18), create kids stories
   elif (age > 18) create horror stories
+
+****09-07-2026****
+Three components are already convered, Three are left
+Indexes, Memory and AI Agents
+
+-> RAG(Part of index component)
+What we were doing till now?
+I/p(Prompt) -> LLM -> O/P(Response)
+But there are some problems in this:-
+    (i)LLMs model are based on parameter, weights and biases. All of the information are stored in the parameters. If we change this the behaviour of the model will be changed. There are some issues with this set up, for example:- If we want some information related to private / company data. If we ask something about summarize my email box, it will not do that because emails are not publicly available
+    We have a company Krishna, there are some rules and regulations in this company. This data is not publicly available on the internet, "How we are doing in the last quarter", It will not able to do that
+    (ii)These LLMs model has cutoff date, If we train it today, the cutoff date would be today itself. If we want to ask something beyond the cutoff date, it won't be able to answer.
+    (iii)Hallucinations (Airline case)
+    when an AI generates confident, plausible-sounding, but entirely false or nonsensical information
+    (iv)Private information (Privacy)
+
