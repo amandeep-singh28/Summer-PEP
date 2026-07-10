@@ -366,3 +366,22 @@ Combined the retrieved information + Prompt
 (iv)Response
 Then we are getting the response
 
+****Indexing****
+(i)Document Loading
+Load data from the different sources.
+For example:-
+  PDF
+  Word document
+  Text file
+  Website
+  Database
+  CSV
+
+(ii)Text Splitting (Chunking)
+Large document gets splitted into chunks
+
+(iii)Embedding of the chunks
+Vectorization
+
+(iv)Store in Vector Database (Indexing)
+The generated vectors, along with their corresponding text chunks and metadata, are stored in a vector database.
