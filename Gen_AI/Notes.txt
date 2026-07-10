@@ -385,3 +385,16 @@ Vectorization
 
 (iv)Store in Vector Database (Indexing)
 The generated vectors, along with their corresponding text chunks and metadata, are stored in a vector database.
+
+-> How to perform Indexing??
+(i)Use the DocumentLoader class from the langchain. This would be responsible for loading the data.
+  If working with pdf -> Then PDFLoader
+  If working with text -> TextLoader
+Similarly we have loaders for everything.
+We can create custom DocLoader also
+Syntax of all the loaders is same
+
+  from langchain_community.document_loaders import PyPDFLoader
+  loader = PyPDFLoader('D:\Summer PEP\Smart_IT_Support_Ticket_Classifier_Project_Plan_Updated.pdf')
+  documents = loader.load()
+  print(documents[0].page_content)
