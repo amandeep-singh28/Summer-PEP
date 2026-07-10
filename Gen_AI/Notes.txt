@@ -344,3 +344,25 @@ They fine tuned these models. We gave wrong prompts and than retrained the model
 
 (ii)Context Engineering
 We gave prompts and on the basis of that we trained the models by giving examples.
+
+****RAG -> Extra knowledge + Prompt*****
+Along with the prompt we gave extra knowledge. This extra knowledge can serve as extra information which was not there previously with the trained model.
+Prompt -----
+            ---> Improved Prompt -> LLM -> Response
+Context ----
+
+-> Steps in RAG
+
+(i)Indexing
+We load all the data, whatever data we want RAG to act upon.
+We load everything to the separate storage
+
+(ii)Retrieve
+Then we retrieve the relevant data from the Index. 
+
+(iii)Augmentation
+Combined the retrieved information + Prompt
+
+(iv)Response
+Then we are getting the response
+
