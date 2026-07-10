@@ -480,3 +480,25 @@ We only want to scan 500 pages - apply this constraints .
                     │
                     ▼
           Documents Ready for RAG
+
+(ii) Chunking
+We try to split the documents into several chunks (sub documents).
+Advantages:
+  - Performance
+  - To optimize cost and resources
+  - Context Window limit
+
+https://www.chunkviz.com/
+
+Different ways to perform chunking:-
+  (i)Character Split Chunking
+    - We have to give chunk size in this.
+    - But how we will define chunk size? -> We will just try and test
+    - But this is not good, because it divides a word also {Check in the website}
+    - We use Chunk Overlap (Current chunk trying to save the previous chunk data also)
+  (ii)Recursive Character Chunking
+      First it fivide the whole text into paragraph(\n\n) but if it is not possible to divide the paragraph, it will divide into sentences, if not possible than into words
+
+  (iii)Document structure chunking
+  (iv)Semantic Chunking
+  (v)Agentic chunking
