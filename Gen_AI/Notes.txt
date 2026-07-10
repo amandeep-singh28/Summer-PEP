@@ -414,3 +414,69 @@ If we have to work with multiple files, than we can use DirectoryLoader. We have
         print("Content:\n", document.page_content)
     print("Metadata:\n", document.metadata)
 
+-> Mini Project - LPU RAG 
+Fetch all info of LPU from official website which is publicly available
+go to the webpage , parse html structure , find all the links available, keep pushing it to the stack 
+
+While stack:
+    check_if_official(link)
+
+Check the link whether the selected link is of my use or not 
+load all the info from the valid link using webpage loader 
+We only want to scan 500 pages - apply this constraints . 
+
+
+                  User Starts Project
+                         │
+                         ▼
+         Start with Official LPU Homepage
+        https://www.lpu.in/
+                         │
+                         ▼
+            Download HTML of Homepage
+                         │
+                         ▼
+             Parse HTML using BeautifulSoup
+                         │
+                         ▼
+            Extract all hyperlinks (<a>)
+                         │
+                         ▼
+          Push every discovered link into Stack
+                         │
+                         ▼
+               While Stack is NOT Empty
+                         │
+                         ▼
+              Pop one URL from Stack
+                         │
+                         ▼
+             Is URL already visited?
+                 │              │
+               Yes             No
+                │               │
+                ▼               ▼
+             Ignore       Check official?
+                                │
+                    ┌───────────┴───────────┐
+                    ▼                       ▼
+                Official                External
+                    │                       │
+                    ▼                       ▼
+          Load webpage using          Ignore
+          WebBaseLoader
+                    │
+                    ▼
+           Save page content
+                    │
+                    ▼
+      Extract more links from page
+                    │
+                    ▼
+      Push new official links to Stack
+                    │
+                    ▼
+       Stop after visiting 500 pages
+                    │
+                    ▼
+          Documents Ready for RAG
