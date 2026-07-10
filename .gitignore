@@ -1,3 +1,4 @@
 *.env
 PendingWork.txt
 .vscode
+*.pdf
