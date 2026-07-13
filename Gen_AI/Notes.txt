@@ -656,3 +656,6 @@ Jatin ->(Spouse) Vanshika
 Son
 |
 Satish ->(Siblings) Selina
+
+-> Vector Store Memory
+Vector Store Memory stores previous conversations as embeddings in a vector database. When a new query arrives, it performs semantic similarity search to retrieve only the most relevant past conversations, allowing the LLM to remember long-term context efficiently without sending the entire chat history.
