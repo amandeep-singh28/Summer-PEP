@@ -533,3 +533,75 @@ Vq(Query Vector)
 Vector store (4 functionalities - that we discussed just above)
 Vector database (4 functionalities + ACID properties + Concurrenct)
 https://medium.com/@abhinavjyoti09/vector-stores-in-langchain-f2a639522f03
+
+Text in vector out (Embedding Models)
+Text in Text out (Text Model)
+
+-> Retrievers
+WData source -> Relevant documents 
+Therefore we query to find the relevant information
+
+https://medium.com/@abhishekjainindore24/langchain-part-12-retrievers-b435ae8f4ea7
+
+Earlier, we stored documents in a vector database and retrieved them using similarity search. However, not all data needs to be stored in a vector database. A retriever can also fetch relevant documents directly from external sources like Wikipedia or Arxiv at query time. That's why LangChain provides different types of retrievers depending on where the data is stored.
+
+Top three retrievers:-
+  (i)MMR
+  (ii)MQR
+  (iii)CCR
+
+-> MMR (Maximum Marginal Relevance)
+Problem: Normal similarity search may return duplicate or very similar documents.
+Example:
+Query: Causes of Climate Change
+
+Doc1 → Arctic glaciers are melting.
+Doc2 → Ice caps are melting.
+Doc3 → Greenhouse gases increase global warming.
+
+A normal retriever might return:
+Doc1 ✅
+Doc2 ✅ (almost the same as Doc1)
+Doc3
+
+MMR returns:
+Doc1 ✅
+Doc3 ✅
+Another different but relevant document
+
+Goal: Return relevant + diverse documents.
+
+-> MQR (Multi-Query Retriever)
+Problem: A user may ask an ambiguous question.
+
+Example:
+Query:
+How can I stay healthy?
+
+The LLM rewrites it into multiple queries:
+
+How to eat healthy?
+How to exercise regularly?
+How to improve mental health?
+How to sleep better?
+
+Each query searches the vector database, and all results are merged.
+
+Goal: Improve retrieval by searching from multiple perspectives.
+
+-> CCR (Contextual Compression Retriever)
+Problem: Retrieved documents often contain unnecessary information.
+Example:
+
+Retrieved Document:
+The Grand Canyon is famous.
+Photosynthesis converts sunlight into energy.
+Millions of tourists visit every year.
+
+The user asked:
+What is photosynthesis?
+
+CCR compresses the document to:
+Photosynthesis converts sunlight into energy.
+
+Goal: Remove irrelevant text and keep only what's needed.
