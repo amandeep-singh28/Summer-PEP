@@ -643,3 +643,16 @@ An entity can be:
   Preference
   Relationship
 
+-> KGM (Knowledge Graph Memory)
+Knowledge Graph Memory (KGM) stores information as entities and their relationships in a graph structure. Instead of remembering only facts, it remembers how those facts are connected, enabling the LLM to perform better reasoning and provide more personalized, context-aware responses.
+
+Jatin is husband of Vanshika
+Satish is son of Jatin
+Selina is sister of Satish
+
+Jatin ->(Spouse) Vanshika
+|
+|
+Son
+|
+Satish ->(Siblings) Selina
