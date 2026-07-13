@@ -511,3 +511,25 @@ Different ways to perform chunking:-
         Now if s3 is also same than it becomes (s1 & s2 & s3)
         If s4 is different than (s1 & s2 & s3, s4 --)
   (v)Agentic chunking
+
+-> Vector Database (Traditional databases are designed for exact matching, whereas vector databases are designed for similarity search.)
+It is used to store data as vectors
+(i)Store Vectors
+(ii)Similarity search
+(iii)Indexing
+(iv)CRUD operations
+
+How indexing works:
+      V1
+      V2
+      V3      We create clusters, for example:- 10 clusters are made and approx 1000 vectors
+Vq    |       are there in each cluster and a new query vector comes in so we check the cluster
+      |       which are same as of the query vector. Than we search in that cluster
+      |
+      |
+      V10,000
+Vq(Query Vector)
+
+Vector store (4 functionalities - that we discussed just above)
+Vector database (4 functionalities + ACID properties + Concurrenct)
+https://medium.com/@abhinavjyoti09/vector-stores-in-langchain-f2a639522f03
