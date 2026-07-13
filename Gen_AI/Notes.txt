@@ -496,9 +496,18 @@ Different ways to perform chunking:-
     - But how we will define chunk size? -> We will just try and test
     - But this is not good, because it divides a word also {Check in the website}
     - We use Chunk Overlap (Current chunk trying to save the previous chunk data also)
-  (ii)Recursive Character Chunking
-      First it fivide the whole text into paragraph(\n\n) but if it is not possible to divide the paragraph, it will divide into sentences, if not possible than into words
+  (ii)Recursive Character Chunking(Best)
+      First it divide the whole text into paragraph(\n\n) but if it is not possible to divide the paragraph, it will divide into sentences, if not possible than into words
 
   (iii)Document structure chunking
+      Document gets splited based on its logical structure.
+      For example:-
+        If we have to do the chunking of a python code. Than we cannot split the document into "\n\n"(para) or "\n"(line), we can do the splitting like whenever a function end do the split, or a variable is declared.
   (iv)Semantic Chunking
+      We try to find the semantic meaning of the sentences and based on that semantic meaning we try to club them.
+      For example:-
+        s1 - s2 - s3 - s4 ---- sn (Vectors)
+        If s1 and s2 are similar, than we combine them. So it become (s1 & s2)
+        Now if s3 is also same than it becomes (s1 & s2 & s3)
+        If s4 is different than (s1 & s2 & s3, s4 --)
   (v)Agentic chunking
