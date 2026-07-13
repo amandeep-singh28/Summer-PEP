@@ -606,7 +606,8 @@ Photosynthesis converts sunlight into energy.
 
 Goal: Remove irrelevant text and keep only what's needed.
 
--> Memory(5th component)
+****Memory(5th component)****
+-> Conversation Memory
 (i)Conversation Buffer Memory
 The LLM remembers the entire conversation.
 Human :- x
@@ -630,3 +631,15 @@ It stores only the last K conversations and remove others.
 
 (iv)Conversation Summary Buffer Memory
 For the last n message, we will store as it is, beyond that we will store the summary.
+
+-> Entity Memory
+Instead of remembering the whole conversation or a summary, it remembers important entities (facts) mentioned during the conversation.
+An entity can be:
+  Person
+  Place
+  Organization
+  Product
+  Date
+  Preference
+  Relationship
+
