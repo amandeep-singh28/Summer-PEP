@@ -605,3 +605,28 @@ CCR compresses the document to:
 Photosynthesis converts sunlight into energy.
 
 Goal: Remove irrelevant text and keep only what's needed.
+
+-> Memory(5th component)
+(i)Conversation Buffer Memory
+The LLM remembers the entire conversation.
+Human :- x
+AI:- Alpha
+Human :- y + (x + Alpha)
+AI:- Beta
+Human :- z + (y + Beta + x + Alpha)
+
+Disadvantage: Context Limit, Hallucination.
+
+(ii)Conversation Summary Memory
+Stores previous message as summary
+Human: x
+AI: Alpha
+Human: y + Summary(x + Alpha)
+AI: Beta
+Human: z + Summary(x + Alpha + y + Beta)
+
+(iii)Conversation Buffer Memory
+It stores only the last K conversations and remove others.
+
+(iv)Conversation Summary Buffer Memory
+For the last n message, we will store as it is, beyond that we will store the summary.
