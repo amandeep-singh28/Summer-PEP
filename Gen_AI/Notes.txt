@@ -704,5 +704,32 @@ If we define multiple tools, than it will suggest only the required tools to use
 If we change the prompt. For example:- What is the capital of India?
   LLM will first check whether the information is present with it or not. If not present than it will tell us to use the tools to get that information.
 
+-> How to work with Custom Tools
+We will cover only this method (@tool)
+It is just a function, define a function
+  Tool - Which can add two numbers(Suppose LLM doesn't know -> We want to create this tool)?
+I/p -> Two number
+O/p -> Addition of two number
+function(num1, num2):
+  return num1 + num2
 
+Now we want to convert this functon into a tool:-
+  Three steps to convert any function into a tool:-
+    (i)@ tool decorator
+    (ii)Provide the type of variable
+    (iii)Description
+
+Add @tool on the top of your function:-
+  @tool
+  function(num1, num2):
+    return num1 + num2
+Declare the type of variable:-
+  @tool
+  function(int num1, int num2):
+    return num1 + num2
+Add Description(So that LLM can know what this function is doing)
+  @tool
+  function(int num1, int num2):
+    """This function adds two number"""
+    return num1 + num2
 
