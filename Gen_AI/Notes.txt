@@ -733,3 +733,7 @@ Add Description(So that LLM can know what this function is doing)
     """This function adds two number"""
     return num1 + num2
 
+If we want to use two tools than we can write the if-else condition.
+But we cannot write long-long conditions, So to solve this problem AgentClass came into the picture
+  AgentClass(From LangChain)
+Check agentClass.ipynb
