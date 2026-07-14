@@ -680,3 +680,29 @@ There are 4 steps:-
   (ii)Bind these tools with LLMs (You have access to these many tools for the reference)
   (iii)Call these tools (LLMs will use its reasoning capabilties keeping the goal in mind, which tools it want to use)
   (iv)Tools Execution (Once the LLM has figured out which tool it want to use, We will use that tool)
+
+There are two types of tools:-
+For what things we can create tool:-
+  You want to access Gmail messages
+  Send Gmail messages
+  Multiply 2 numbers
+  We want to execute python code
+(i)Built-in Tools(LangChain already has)
+(ii)Custom Tools
+  -@ tool
+  -Structured class
+  -Base class(Forgot the name)
+
+
+-> How to work with Inbuilt Tools
+(i)Tavily search
+Firstly we have to create an API key from the Travily website.
+Add the api_key in the .env folder like this :- TAVILY_API_KEY = "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"
+
+If we define multiple tools, than it will suggest only the required tools to use.
+
+If we change the prompt. For example:- What is the capital of India?
+  LLM will first check whether the information is present with it or not. If not present than it will tell us to use the tools to get that information.
+
+
+
