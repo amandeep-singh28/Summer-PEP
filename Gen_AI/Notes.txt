@@ -659,3 +659,24 @@ Satish ->(Siblings) Selina
 
 -> Vector Store Memory
 Vector Store Memory stores previous conversations as embeddings in a vector database. When a new query arrives, it performs semantic similarity search to retrieve only the most relevant past conversations, allowing the LLM to remember long-term context efficiently without sending the entire chat history.
+
+****AI Agents****
+LLM + Tools
+
+              ------Tool----Action 1
+              |
+              |
+Goal -> LLM-- ------Tool----Action 2
+              |
+              |
+              ------Tool----Action 3
+
+Tools:-
+  We use multiple APIs(Tools)
+
+How to work with tools, What tools are and how to define it??
+There are 4 steps:-
+  (i)Create Tools
+  (ii)Bind these tools with LLMs (You have access to these many tools for the reference)
+  (iii)Call these tools (LLMs will use its reasoning capabilties keeping the goal in mind, which tools it want to use)
+  (iv)Tools Execution (Once the LLM has figured out which tool it want to use, We will use that tool)
