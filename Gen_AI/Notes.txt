@@ -737,3 +737,46 @@ If we want to use two tools than we can write the if-else condition.
 But we cannot write long-long conditions, So to solve this problem AgentClass came into the picture
   AgentClass(From LangChain)
 Check agentClass.ipynb
+
+-> Project
+Make a tool that would open VsCode & Chrome on the basis of the user input
+
+****Revision****
+-> Embedding Models
+Two types:-
+  Embed_documents
+    embed_documents() is used to convert documents or chunks into embeddings before storing them in a vector database.
+  Embed_query
+    embed_query() is used to convert the user's question into an embedding during retrieval.
+
+4 types
+  Static Prompt
+  Prompt Template -> Whenever we want to use dynamic prompt
+    PromptTemplate(
+      template = """ """
+      input_variables = []
+    )
+
+Messages:-
+  Different roles of replies, there are four kind of message:-
+    System -> You are a College assistant
+    Human -> The messages which come from the humans
+    AI -> Messages from AI
+    Tool message -> What the tool respond to us
+
+AIMessage (
+  content = " "
+)
+
+ChatPromptTemplate:-
+  Combining Prompt Template and Message into one class.
+  Here we are passing dynamic prompt also and along with messages like AI, HUMAN
+ChatPromptTemplate (
+  ('System', '<content>'),
+  ('AI', '<content>'),
+  ('Human', '<content>')
+)
+
+Message placeholder:-
+  We can use this in the history of all the messages to reference back previous messages.
+  User has the conversation yesterday but he closed the chat and now he want to bring back those message, we can do this via Message placeholder.
