@@ -22,3 +22,22 @@ We only have to work with python in data science. But we have problems like this
                 name = "Minions",
                 year = 2026
             )
+
+****Introduction to LangGraph****
+The whole idea of LangGraph is to create graph like structure.
+It is built on top of LangChain.
+Concept of chains, but using chains you can create simple workflow.
+If you want to create complex chains LangChain is not helpful.
+
+-> Key elements in LangGraph
+(i)Node -> A Node is simply a function or an operation that performs some task.
+(ii)Edge -> Which connects two nodes
+(iii)State -> Interconeected data sctructure. We pass this data structure to the node so that the node can have the relevant information
+For example:-
+    Graph for a specific student(Student name and roll no is something which will be req in all the nodes, we will keep this information in this state variable)
+
+    Lets say, if we are trying to create a whole report card for the student, first node is repsonsible for "aggregating the marks", 2nd node is repsonsible for the "extra curriculars". Now based on sum of this two nodes we want to categorize the student is in Category B or Category A.
+    So this information is something that we want to travel all across the nodes, so we will keep it in the state variable.
+
+(iv)Conditional Node -> Chooses the next node based on a condition.
+(v)Start / End Node -> Ending nodes can be multiple
