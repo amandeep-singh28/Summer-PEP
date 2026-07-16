@@ -1,0 +1,24 @@
+****Type Annotations****
+We only have to work with python in data science. But we have problems like this
+    (i)It does not have static type of the variable(We don't write the type of the variable)
+        year = 2004
+        Logically it must contains numeric only, but what if someone changes it to:-
+            year = "2010"
+        Python will change it.
+    Solution:-
+        Enforce python to be in the declared type classes.
+        We will take use of the library:-
+            from typing import TypedDict # it will not enforce the rules
+            
+        movie = {
+            'name' : str
+            'year : int
+        }
+        We will create a class like this:-
+            class Movie(TypedDict):
+                name : str
+                year : int
+            movie = Movie(
+                name = "Minions",
+                year = 2026
+            )
