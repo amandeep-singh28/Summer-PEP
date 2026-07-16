@@ -41,3 +41,33 @@ For example:-
 
 (iv)Conditional Node -> Chooses the next node based on a condition.
 (v)Start / End Node -> Ending nodes can be multiple
+(vi)Graph
+(vii)State Graph -> Which will contains the schema of the graph
+
+-> Node
+It will be a function which will do a specific thing.
+It will have two things:-
+    (i)Name of the node
+    (ii)Function
+Let's build a simple graph:-
+    (i)HelloWorld
+        Start
+        Name of the node is "Hello", Function name would be Hello-World. Node would be printing a message
+        End
+    We will create a "State" variable(Just for practice) in which "message" would be there.
+        AgentState()
+    Implementation:-
+        (i)Since we had define
+        def helloworld(state) -> State:
+            state['message'] = 'hello_world'
+            return state
+        Now our function is ready. We will add this fucntion in the graph.
+    (ii)Create a simple LangGraph application that takes a student's name, age, and marks as input through the graph state. The node should calculate the total marks, generate a personalized message, store it in the state, and return the updated state after graph execution.
+    
+    (iii)Class AgentState():
+        name : str
+        age : int
+        msg : str
+    User will pass name and age
+    In the first function, s1 = "Hi{name}, How are you"
+    In the second function, s1 + "Your age is {age}"
