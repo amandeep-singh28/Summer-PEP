@@ -71,3 +71,39 @@ Let's build a simple graph:-
     User will pass name and age
     In the first function, s1 = "Hi{name}, How are you"
     In the second function, s1 + "Your age is {age}"
+
+****Loop Graph****
+
+Definition:
+A Loop Graph is a special type of Conditional Graph in which the execution can return to a previous node and repeat the workflow until a specified condition is satisfied.
+
+Why it is used?
+- To retry failed operations.
+- To improve or refine AI-generated responses.
+- To repeat a task until the desired result is achieved.
+
+Working:
+Start
+  ↓
+Node A
+  ↓
+Node B
+  ↓
+Condition
+ ├── True  → END
+ └── False → Back to Node A (Loop)
+
+Example:
+An AI generates an answer → another AI evaluates it.
+- If the answer is good → END.
+- If the answer is incorrect → Generate the answer again.
+
+Common Use Cases:
+- Self-correcting AI Agents
+- RAG applications (retrieve more documents if needed)
+- Retrying failed API calls
+- Code generation and debugging
+- Multi-step planning agents
+
+Key Point:
+Unlike a normal graph where execution moves only forward, a Loop Graph can revisit previous nodes until the stopping condition becomes true.
