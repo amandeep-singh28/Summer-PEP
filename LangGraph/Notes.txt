@@ -107,3 +107,43 @@ Common Use Cases:
 
 Key Point:
 Unlike a normal graph where execution moves only forward, a Loop Graph can revisit previous nodes until the stopping condition becomes true.
+
+******** Parallel Graph (LangGraph) ********
+
+Definition:
+A Parallel Graph is a graph where multiple nodes are executed simultaneously (in parallel) after a single node. This helps reduce execution time by performing independent tasks at the same time.
+
+Why use it?
+- Faster execution
+- Better resource utilization
+- Useful when tasks do not depend on each other
+
+How it works:
+START
+   │
+   ▼
+ Main Node
+   ├────────► Node A
+   ├────────► Node B
+   └────────► Node C
+        │
+        ▼
+   Results are merged
+        │
+        ▼
+       END
+
+Real-world Example:
+A travel assistant receives a user query:
+- Node A → Searches flights
+- Node B → Searches hotels
+- Node C → Checks weather
+
+All three tasks run simultaneously, and their results are combined before sending the final response.
+
+Key Points:
+- Multiple nodes execute at the same time.
+- Independent tasks can run in parallel.
+- Results are merged into a shared state.
+- Improves speed and efficiency.
+- Commonly used in AI Agents, RAG pipelines, and multi-tool workflows.
