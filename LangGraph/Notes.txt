@@ -392,3 +392,19 @@ END   Summarize Old Messages
            │
            ▼
           END
+
+****Long Term Memory****(Cross thread)
+(This categorization is for our reference, this is not in LangGraph)
+There are three different sub categories in which we store LTM(Only the important information is stored):-
+    (i)Episodic memory
+        Whatever is the history of the chat is stored in there.
+    (ii)Semantic memory
+        All the user related facts(entity)
+    (iii)Procedured memory
+
+Summary Table
+Memory Type	            Stores	                                Example
+Episodic Memory	        Important events/experiences	        "User got placed at TCS Prime."
+Semantic Memory	        Facts about the user	                "User's name is Amandeep."
+Procedural Memory	    User's preferred way of interaction	    "Explain step-by-step."
+
