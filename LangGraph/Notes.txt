@@ -350,3 +350,45 @@ Similarly:
 -   thread_id tells LangGraph which conversation to load.
 -   Memory contains the actual conversation history and user
     information.
+
+-> Techniques to implement STM
+There are several techniques to implement STM:
+    (i) Conversation Buffer Memory
+        Where we pass all
+    (ii) Conversation Window Buffer Memory
+        It stores only the last K conversations and remove others.
+        Instead of last-k messages we store only last k-tokens
+    (iii) Conversation Summary Memory
+        Stores previous message as summary
+    (iv) Conversation Summary Buffer Memory
+        For the last n message, we will store as it is, beyond that we will store the summary.
+
+Summarize node
+    Will only summarize if summarize is needed. If suppose user has only posted 1 message than we will not summarize. If message count > 5 than we will summarize only
+
+User Message
+      │
+      ▼
+Chatbot Node
+      │
+      ▼
+Summary + Recent Messages → LLM
+      │
+      ▼
+Token Count > MAX_TOKENS ?
+      │
+ ┌────┴────┐
+ │         │
+No        Yes
+ │         │
+ ▼         ▼
+END   Summarize Old Messages
+           │
+           ▼
+ Keep Recent Messages
+           │
+           ▼
+      Save Updated State
+           │
+           ▼
+          END
