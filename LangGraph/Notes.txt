@@ -225,3 +225,17 @@ Example:
 To retrieve the earlier message, we use the concept of STM. To solve this thing we use the concept of "CheckPointer(Persistence)"
 
 
+-> Persistence(Check from copy notes -> Visualization of Checkpointers)
+Problem Statement :- Whenever we are calling invoke(), we are forgetting the previous values
+
+Persistence helps to keep information beyond a single graph run.
+
+Time travelling tool which tooks snapshots of the state values at every Node
+    Save all the values of the ChatNode(Every Node Snapshot) at some place
+
+Since checkpointers are stored in the memory, it is known as "Persistence"
+
+- Where the Checkpointers are getting stored(It supports only three methods)?
+    - In memory store (RAM) -> Used only at the time for Testing
+    - SQLlite database -> Production
+    - PostGre SQL -> Production
