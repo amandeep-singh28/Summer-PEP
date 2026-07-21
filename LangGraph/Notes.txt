@@ -239,3 +239,114 @@ Since checkpointers are stored in the memory, it is known as "Persistence"
     - In memory store (RAM) -> Used only at the time for Testing
     - SQLlite database -> Production
     - PostGre SQL -> Production
+
+Lets say:-
+There is a session 1 and now we want to continue with session 2 but the history of session 1 must get stored
+    Session1
+    Session2
+We want to carry out session2 as well
+We pass on the "thread id"
+
+-> Elaborated Notes (ChatGpt)
+Why do we need thread_id in LangGraph?
+Problem Statement:-
+    Suppose you are building a chatbot.
+
+    A user chats with the bot today and comes back tomorrow. You want the
+    chatbot to continue the previous conversation instead of starting from
+    scratch.
+
+Question: How does LangGraph know which previous conversation belongs to
+the user?
+    Answer: We pass a unique identifier called thread_id.
+The thread_id does NOT store the conversation. It only identifies which
+conversation history should be loaded.
+
+------------------------------------------------------------------------
+Example
+Session 1 (Today)
+
+User: Hi
+AI: Hello!
+
+User: My name is Amandeep.
+AI: Nice to meet you, Amandeep.
+
+The conversation is saved with:
+thread_id = “user1”
+
+Storage:
+thread_id = “user1”
+
+Conversation History: - Hi - Hello! - My name is Amandeep. - Nice to
+meet you, Amandeep.
+
+Notice that the conversation is stored, not the thread_id. The thread_id
+is simply attached to that conversation.
+
+------------------------------------------------------------------------
+Session 2 (Tomorrow)
+The same user comes back.
+
+User: What is my name?
+We again pass:
+thread_id = “user1”
+
+LangGraph thinks:
+“I received thread_id = ‘user1’. Let me check the stored conversations.”
+
+It finds:
+thread_id = “user1”
+
+Conversation History: - Hi - Hello! - My name is Amandeep. - Nice to
+meet you, Amandeep.
+
+It loads this history and replies:
+AI: Your name is Amandeep.
+
+------------------------------------------------------------------------
+
+What if we DON’T pass the thread_id?
+
+User: What is my name?
+No thread_id is provided.
+
+LangGraph cannot identify which previous conversation belongs to the
+user, so it starts a brand-new conversation.
+
+Conversation History: Empty
+AI: Sorry, I don’t know your name.
+
+------------------------------------------------------------------------
+
+What if we pass the WRONG thread_id?
+Suppose we pass:
+thread_id = “user2”
+
+Storage:
+user1 -> Conversation of Amandeep user2 -> No previous conversation
+
+LangGraph opens the conversation for user2, which is empty.
+AI: Sorry, I don’t know your name.
+
+------------------------------------------------------------------------
+Important Difference
+
+Many beginners think:
+thread_id stores the memory.
+This is incorrect.
+
+Actually:
+thread_id only identifies the memory.
+
+Think of it like this:
+-   thread_id = Roll Number of a student
+-   Memory = Student’s Report Card
+
+The roll number does not contain the marks. It simply helps the school
+find the correct report card.
+
+Similarly:
+-   thread_id tells LangGraph which conversation to load.
+-   Memory contains the actual conversation history and user
+    information.
