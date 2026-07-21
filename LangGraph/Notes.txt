@@ -202,4 +202,26 @@ So we create memory from our side. There are two types of memory in LangChain:-
             Personalized Experience
 
 
+****Short Term Memory****
+Trying to invoke the graph again and again. Graph will work for the particular session. Whenever you will invoke the graph, previous session value would be gone.
+For example:-
+    while input is True:
+        graph.invoke(prompt) # invoking graph again loss the previous messages
+
+Without Short-Term Memory
+If you simply do:
+while True:
+    user_input = input("You: ")
+    graph.invoke({"messages": [user_input]})
+
+Every call to graph.invoke() starts with a fresh state.
+Example:
+    User: Hi
+    AI: Hello!
+
+    User: What did I just say?
+    AI: I don't know.
+
+To retrieve the earlier message, we use the concept of STM. To solve this thing we use the concept of "CheckPointer(Persistence)"
+
 
