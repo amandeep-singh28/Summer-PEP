@@ -147,3 +147,36 @@ Key Points:
 - Results are merged into a shared state.
 - Improves speed and efficiency.
 - Commonly used in AI Agents, RAG pipelines, and multi-tool workflows.
+
+****RAG in LangChain****
+We can create a RAG also in LangGraph.
+    - We will create a node for RAG
+    - We will use LangChain for the logic and then we will connect the node
+
+Start
+  |
+  |
+  |
+ChatNode ----> RAG Node
+  |
+  |
+  |
+End
+
+-> Steps to Create RAG in LangGraph
+1. Create a RAG Node
+Define a node inside the graph.
+This node will handle all RAG-related operations.
+
+2. Implement RAG Logic using LangChain
+Inside the node, use LangChain components such as:
+
+Document Loader – Load documents.
+Text Splitter – Split documents into chunks.
+Embedding Model – Convert chunks into vectors.
+Vector Database – Store embeddings.
+Retriever – Fetch relevant chunks based on the user query.
+LLM – Generate the final answer using the retrieved context.
+3. Connect the Node in LangGraph
+
+Once the RAG node is ready, connect it with other nodes in the graph.
