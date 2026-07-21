@@ -408,3 +408,10 @@ Episodic Memory	        Important events/experiences	        "User got placed at
 Semantic Memory	        Facts about the user	                "User's name is Amandeep."
 Procedural Memory	    User's preferred way of interaction	    "Explain step-by-step."
 
+-> Steps
+(i)Extract important information
+(ii)Store in LTM
+(iii)Retrieve from LLM
+(iv)Context + Prompt + LLM
+
+We use the concept of "namespaces"(Like folder) -> To store the data in a better way
