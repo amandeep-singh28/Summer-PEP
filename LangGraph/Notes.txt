@@ -180,3 +180,26 @@ LLM – Generate the final answer using the retrieved context.
 3. Connect the Node in LangGraph
 
 Once the RAG node is ready, connect it with other nodes in the graph.
+
+****Memory****
+Parameter, weights and biases the line can have.
+We only have 'x' in our hand that we can change
+
+y = (fp) * x
+
+x -> Prompt
+y -> Response
+
+LLM's are stateless. It means that there is no memory in the LLMs.
+    y1 != x1
+    y2 != x2
+So we create memory from our side. There are two types of memory in LangChain:-
+    (i)Short Term Memory
+        Short-term memory lets your application remember previous interactions within a single thread or conversation.
+    (ii)Long Term Memory
+        Long-term memory in LangGraph allows systems to retain information across different conversations or sessions.
+        Why??
+            Personalized Experience
+
+
+
