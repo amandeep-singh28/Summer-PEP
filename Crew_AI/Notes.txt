@@ -45,3 +45,8 @@ There would be a agent (Researcher Agent) -> Gather 5 different interesting fact
 
 Than another agent -> Blog writer
 It will write blog on that particular Topic
+
+****Task 4****
+Create 2 tools:-
+- Create inbuilt tool, tavily search. Instead of LLM finding the search, make sure tavily search do it
+- Create a custom took, Which will tell the city of the temperature delhi
