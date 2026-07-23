@@ -25,3 +25,9 @@ kickoff(inputs={"email": email})
    │
    ▼
 Professional Email
+
+
+****Task 2****
+The user is using some of the abbreviations that is company specific. LLM doesn't know about these abbreviations.
+We will create a tool in which we will write the "Full forms" and their "meanings".
+We will pass this tool to the agent as we were doing earlier.
