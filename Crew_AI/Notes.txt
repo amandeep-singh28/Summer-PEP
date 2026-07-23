@@ -1,0 +1,8 @@
+****Introduction to CREW AI****
+Agent = LLM + Tools
+Agentic AI = When we combine multiple agents to complete a goal that workflow is known as Agentic AI
+
+LLM -> Agent -> Task -> Crew
+In task there would be many "sub-tasks" which would complete that particular whole task. So multiple agents would work together and that army of agents is known as CREW
+CrewAI is a Python framework that helps you build and manage multiple AI agents (a crew), assign them tasks, and coordinate their execution.
+
