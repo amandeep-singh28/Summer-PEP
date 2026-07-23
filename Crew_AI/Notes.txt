@@ -36,3 +36,12 @@ We will pass this tool to the agent as we were doing earlier.
 Create a agent(Greeter Agent). Don't define any tool.
 Work: It will greet the user not matter what the user is asking
 Pass the user input to the agent
+
+****How to work with multiple Agents****
+Problem Statement:-
+Write blogs on some article
+User -> Provide Topic
+There would be a agent (Researcher Agent) -> Gather 5 different interesting facts related to the Topic
+
+Than another agent -> Blog writer
+It will write blog on that particular Topic
