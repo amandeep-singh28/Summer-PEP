@@ -6,3 +6,22 @@ LLM -> Agent -> Task -> Crew
 In task there would be many "sub-tasks" which would complete that particular whole task. So multiple agents would work together and that army of agents is known as CREW
 CrewAI is a Python framework that helps you build and manage multiple AI agents (a crew), assign them tasks, and coordinate their execution.
 
+****Project 1 using Crew AI****
+Agent would be email writer agent. Its work is to rephrase the email which the user as written in the informal tone
+
+LLM
+   │
+   ▼
+Agent
+   │
+   ▼
+Task (contains {email})
+   │
+   ▼
+Crew
+   │
+   ▼
+kickoff(inputs={"email": email})
+   │
+   ▼
+Professional Email
