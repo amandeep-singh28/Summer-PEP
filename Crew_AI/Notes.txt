@@ -31,3 +31,8 @@ Professional Email
 The user is using some of the abbreviations that is company specific. LLM doesn't know about these abbreviations.
 We will create a tool in which we will write the "Full forms" and their "meanings".
 We will pass this tool to the agent as we were doing earlier.
+
+****Task 3****
+Create a agent(Greeter Agent). Don't define any tool.
+Work: It will greet the user not matter what the user is asking
+Pass the user input to the agent
