@@ -49,4 +49,35 @@ It will write blog on that particular Topic
 ****Task 4****
 Create 2 tools:-
 - Create inbuilt tool, tavily search. Instead of LLM finding the search, make sure tavily search do it
-- Create a custom took, Which will tell the city of the temperature delhi
+- Create a custom tool, Which will tell the city of the temperature delhi
+
+****CREW AI CLI****
+Before creating a CrewAI project, we need to install the CrewAI Command Line Interface (CLI).
+
+-> What is a CLI?
+A Command Line Interface (CLI) is a tool that allows users to interact with software by typing commands in the terminal instead of using a graphical interface.
+
+CrewAI provides a CLI that automates tasks such as:
+- Creating a new CrewAI project.
+- Running CrewAI applications.
+- Installing project dependencies.
+- Managing CrewAI projects.
+
+(i) Step 1: Install uv
+uv is a modern Python package and project manager developed by Astral. It is significantly faster than pip and is officially recommended by CrewAI.
+   powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+Verify the installation:
+   uv --version
+
+(ii)Step 2: Install the CrewAI CLI
+   uv tool install crewai
+
+This installs the CrewAI CLI globally on your system.
+
+Verify the installation:
+   uv tool list
+Output:
+   crewai v1.15.5
+   
+-> Why do we use the CrewAI CLI?
+Instead of manually creating folders and configuration files, the CrewAI CLI automatically generates a standardized project structure and provides commands to manage the project.
