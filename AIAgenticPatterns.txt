@@ -63,3 +63,30 @@ The Tree of Thoughts pattern enables an AI agent to:
                         ▼
                 Final Solution
 
+(iv)Reflection Pattern
+In the Reflection Pattern, the task is completed in multiple stages:
+- Solver Agent solves the problem.
+- Reviewer (Reflection) Agent evaluates the solution.
+- Feedback is generated.
+- Solver Agent improves the solution using the feedback.
+- The cycle can repeat until the solution is satisfactory.
+
+Question
+    │
+    ▼
+Solver Agent
+(Solve the problem)
+    │
+    ▼
+Reviewer Agent
+(Evaluate the solution)
+    │
+    ▼
+Generate Feedback
+    │
+    ▼
+Retry / Improve Solution
+    │
+    ▼
+Final Output
+
