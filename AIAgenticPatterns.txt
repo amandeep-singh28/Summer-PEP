@@ -1,0 +1,16 @@
+(i)ReAct Pattern
+Re -> Reasoning
+Act -> Action
+Our agent will have reasoning capabilties, which tool we use, in what order we have to execute the tools.
+Question
+    |
+Reasoning capabilties
+    |
+Action
+    |
+Reasoning capabilties
+    |
+Action
+    |
+Output
+
