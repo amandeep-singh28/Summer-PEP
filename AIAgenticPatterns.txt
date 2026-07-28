@@ -14,3 +14,24 @@ Action
     |
 Output
 
+(ii)Plan & Execute Pattern
+In the Plan & Execute Pattern, the AI agent performs two distinct phases:
+- Planning Phase
+    Understand the user's goal.
+    Break the task into smaller steps.
+    Decide the order in which the steps should be executed.
+- Execution Phase
+    Execute each step one by one.
+    Use tools whenever required.
+    Produce the final output.
+
+Question
+    |
+Plan
+    |
+Step 1
+    |
+Step 2
+    |
+Output
+
