@@ -35,3 +35,31 @@ Step 2
     |
 Output
 
+(iii)TOT(Tree of thoughts)
+The Tree of Thoughts pattern enables an AI agent to:
+- Generate multiple possible ideas (thoughts).
+- Evaluate each idea.
+- Keep the best ones.
+- Discard poor ones.
+- Continue exploring until it reaches the best solution.
+
+             Problem Statement
+                    │
+                    ▼
+            Generate Multiple Ideas
+            ┌──────────┬──────────┬
+            ▼          ▼          ▼
+        Idea 1     Idea 2     Idea 3
+            │          │          │
+            ▼          ▼          ▼
+        Evaluate    Evaluate   Evaluate
+        Good/Bad    Good/Bad   Good/Bad
+            │          │          │
+            └──Keep Best Thought───
+                        │
+                        ▼
+                Continue Reasoning
+                        │
+                        ▼
+                Final Solution
+
