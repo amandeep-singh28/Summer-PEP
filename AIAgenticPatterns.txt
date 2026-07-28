@@ -90,3 +90,35 @@ Retry / Improve Solution
     ▼
 Final Output
 
+(v)Modified Reflection Pattern
+The Modified Reflection Pattern consists of four stages:
+(i) Multiple Solver Agents
+- Each agent independently solves the same problem.
+- They may use different reasoning styles or approaches.
+(ii) Critic Agent
+- Reviews every solution.
+- Identifies mistakes, strengths, and weaknesses.
+- Suggests improvements.
+(iii) Judge Agent
+- Reads all solutions along with the critic's feedback.
+- Selects the best solution (or combines the best parts of multiple solutions).
+(iv) Final Output
+- The user receives the highest-quality answer
+
+               Problem Statement
+                      │
+      ┌───────────────┼───────────────┐
+      ▼               ▼               ▼
+  Solver Agent 1  Solver Agent 2  Solver Agent 3
+      │               │               │
+      └───────────────┼───────────────┘
+                      ▼
+               Critic Agent
+      (Criticizes all solutions)
+                      │
+                      ▼
+                Judge Agent
+      (Selects the best solution)
+                      │
+                      ▼
+                 Final Answer
